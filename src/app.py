@@ -14,8 +14,9 @@ def submit():
     return render_template("hello.html", name=input_name, age=input_age)
 
 
+@app.route("/q", methods=["GET"])
 def process_query(query):
     if query == "dinosaurs":
         return "Dinosaurs ruled the Earth 200 million years ago"
-    elif query == "asteroids":
+    else:
         return "Unknown"
