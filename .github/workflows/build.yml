@@ -27,7 +27,7 @@ jobs:
       - name: Install pytest
         run: pip install pytest
       - name: Run tests
-        run: pytest "/homes/yf724/software/SSE-lab2/src/*.py"
+        run: pytest "src/*.py"
 
   deploy-to-impaas:
     needs: python-formatting
