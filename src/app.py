@@ -16,12 +16,14 @@ def submit():
 
 @app.route("/query", methods=["GET"])
 def process_queries():
-    query = request.args.get("q")
+    query = request.args.get("q", "")
     return process_query(query)
 
 
 def process_query(query):
     if query == "dinosaurs":
         return "Dinosaurs ruled the Earth 200 million years ago"
+    elif "your name" in query:
+        return "Yiran and Wenqing"
     else:
         return "Unknown"
