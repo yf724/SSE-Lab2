@@ -45,6 +45,12 @@ def process_query(query):
             if number_list[i]**(1/2) == round(number_list[i]**(1/2)):
                 if cube(number_list[i]):
                     return str(number_list[i])
+    elif "primes" in query:
+        numbers = re.findall(r'\d+', query)
+        number_list = [int(num) for num in numbers]
+        for i in range(5):
+            if primes(number_list[i]):
+                return str(number_list[i])
     else:
         return "Unknown"
 
@@ -54,3 +60,10 @@ def cube(num):
         if i**3 == num:
             return True
     return False
+
+
+def primes(num):
+    for i in range(2, num):
+        if (num / i) == round(num / i):
+            return False
+    return True
