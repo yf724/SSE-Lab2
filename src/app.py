@@ -38,5 +38,19 @@ def process_query(query):
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
         return str(number_list[0] * number_list[1])
+    elif "a square and a cube" in query:
+        numbers = re.findall(r'\d+', query)
+        number_list = [int(num) for num in numbers]
+        for i in range(7):
+            if number_list[i]**(1/2) == round(number_list[i]**(1/2)):
+                if cube(number_list[i]):    
+                    return str(number_list[i])
     else:
         return "Unknown"
+
+
+def cube(num):
+    for i in range(num):
+        if i**3 == num:
+            return True
+    return False

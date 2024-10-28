@@ -28,3 +28,9 @@ def test_add_up_numbers():
 def test_multiply_numbers():
     assert process_query(
             "What is 31 multiplied by 21") == "651"
+
+
+def test_square_and_cube_numbers():
+    assert process_query(
+            """Which of the following numbers is both
+            a square and a cube: 64, 8, 2, 3, 4, 5, 6""") == "64"
