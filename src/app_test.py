@@ -40,3 +40,8 @@ def test_prime_number():
     assert process_query(
            """ Which of the following numbers are primes:
            92, 6, 85, 23, 42?""") == "23"
+
+
+def test_minus_numbers():
+    assert process_query(
+            """What is 66 minus 97?""") == "-31"
