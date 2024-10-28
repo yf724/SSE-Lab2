@@ -45,3 +45,8 @@ def test_prime_number():
 def test_minus_numbers():
     assert process_query(
             """What is 66 minus 97?""") == "-31"
+
+
+def test_power_numbers():
+    assert process_query(
+            """What is 5 to the power of 8?""") == "390625"
