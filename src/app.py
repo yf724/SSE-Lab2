@@ -43,7 +43,7 @@ def process_query(query):
         number_list = [int(num) for num in numbers]
         for i in range(7):
             if number_list[i]**(1/2) == round(number_list[i]**(1/2)):
-                if cube(number_list[i]):    
+                if cube(number_list[i]):
                     return str(number_list[i])
     else:
         return "Unknown"
