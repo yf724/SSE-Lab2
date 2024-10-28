@@ -29,10 +29,10 @@ def process_query(query):
     elif "Which of the following numbers is the largest" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
-        return max(number_list)
+        return str(max(number_list))
     elif "plus" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
-        return sum(number_list)
+        return str(sum(number_list))
     else:
         return "Unknown"

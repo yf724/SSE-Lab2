@@ -17,9 +17,9 @@ def test_your_name_returns_yiran_and_wenqing():
 
 def test_largest_number():
     assert process_query(
-            "Which of the following numbers is the largest: 29, 41,22") == 41
+            "Which of the following numbers is the largest: 29, 41,22") == "41"
 
 
 def test_add_up_numbers():
     assert process_query(
-            "What is 55 plus 90") == 145
+            "What is 55 plus 90") == "145"
