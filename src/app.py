@@ -58,7 +58,7 @@ def process_query(query):
         answers = []
         for item in answer:
             answers.append(str(item))
-        return answers
+        return ", ".join(answers)
     elif "minus" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
