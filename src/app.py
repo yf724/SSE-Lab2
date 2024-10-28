@@ -32,6 +32,3 @@ def process_query(query):
         return max(number_list)
     else:
         return "Unknown"
-
-
-
