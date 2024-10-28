@@ -30,7 +30,6 @@ def process_query(query):
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
         return max(number_list)
-
     else:
         return "Unknown"
 
