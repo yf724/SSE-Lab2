@@ -33,7 +33,7 @@ def test_multiply_numbers():
 def test_square_and_cube_numbers():
     assert process_query(
             """Which of the following numbers is both
-            a square and a cube: 64, 8, 2, 3, 4, 5, 6""") == "64"
+            a square and a cube: 64, 8, 2, 3, 4, 5, 6""") == ["64"]
 
 
 def test_prime_number():

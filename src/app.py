@@ -41,12 +41,12 @@ def process_query(query):
     elif "a square and a cube" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
-        l = []
+        answer = []
         for i in range(7):
             if number_list[i]**(1/2) == round(number_list[i]**(1/2)):
                 if cube(number_list[i]):
-                    l.append(str(number_list[i]))
-        return l
+                    answer.append(str(number_list[i]))
+        return answer
     elif "primes" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
