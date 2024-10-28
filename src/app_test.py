@@ -13,3 +13,7 @@ def test_does_not_know_about_asteroids():
 
 def test_your_name_returns_yiran_and_wenqing():
     assert process_query("What is your name") == "yfwt"
+
+
+def test_largest_number():
+    assert process_query("Which of the following numbers is the largest: 29, 41,22") == 41

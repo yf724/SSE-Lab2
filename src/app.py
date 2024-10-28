@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import re
 app = Flask(__name__)
 
 
@@ -25,5 +26,13 @@ def process_query(query):
         return "Dinosaurs ruled the Earth 200 million years ago"
     elif "your name" in query:
         return "yfwt"
+    elif "Which of the following numbers is the largest" in query:
+        numbers = re.findall(r'\d+', query)
+        number_list = [int(num) for num in numbers]
+        return max(number_list)
+
     else:
         return "Unknown"
+
+
+
