@@ -24,6 +24,6 @@ def process_query(query):
     if query == "dinosaurs":
         return "Dinosaurs ruled the Earth 200 million years ago"
     elif "your name" in query:
-        return "Yiran and Wenqing"
+        return "yfwt"
     else:
         return "Unknown"

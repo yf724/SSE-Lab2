@@ -12,4 +12,4 @@ def test_does_not_know_about_asteroids():
 
 
 def test_your_name_returns_yiran_and_wenqing():
-    assert process_query("What is your name") == "Yiran and Wenqing"
+    assert process_query("What is your name") == "yfwt"
