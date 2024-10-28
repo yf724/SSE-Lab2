@@ -23,3 +23,8 @@ def test_largest_number():
 def test_add_up_numbers():
     assert process_query(
             "What is 55 plus 90") == "145"
+
+
+def test_multiply_numbers():
+    assert process_query(
+            "What is 31 multiplied by 21") == "651"

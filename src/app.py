@@ -34,5 +34,9 @@ def process_query(query):
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
         return str(sum(number_list))
+    elif "multiplied" in query:
+        numbers = re.findall(r'\d+', query)
+        number_list = [int(num) for num in numbers]
+        return str(number_list[0] * number_list[1])
     else:
         return "Unknown"
