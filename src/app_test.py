@@ -44,7 +44,7 @@ def test_prime_number():
 def test_prime_number():
     assert process_query(
             """Which of the following numbers are primes:
-              37, 8, 73, 47, 25?""") == ["37", "73", "47"]
+              37, 8, 73, 47, 25?""") == ["37", "47", "73"]
     
 
 def test_minus_numbers():

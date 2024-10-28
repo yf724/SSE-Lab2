@@ -24,25 +24,20 @@ def process_queries():
 def process_query(query):
     if query == "dinosaurs":
         return "Dinosaurs ruled the Earth 200 million years ago"
-    
     elif "your name" in query:
         return "yfwt"
-    
     elif "Which of the following numbers is the largest" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
         return str(max(number_list))
-    
     elif "plus" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
         return str(sum(number_list))
-    
     elif "multiplied" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
         return str(number_list[0] * number_list[1])
-    
     elif "a square and a cube" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
@@ -52,26 +47,26 @@ def process_query(query):
                 if cube(number_list[i]):
                     answer.append(str(number_list[i]))
         return answer
-    
     elif "primes" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
         answer = []
         for i in range(5):
             if primes(number_list[i]):
-                answer.append(str(number_list[i]))
-        return answer
-            
+                answer.append((number_list[i]))
+        answer.sort()
+        answers = []
+        for item in answer:
+            answers.append(str(item))
+        return answers
     elif "minus" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
         return str(number_list[0] - number_list[1])
-    
     elif "power" in query:
         numbers = re.findall(r'\d+', query)
         number_list = [int(num) for num in numbers]
         return str(number_list[0] ** number_list[1])
-    
     else:
         return "Unknown"
 
