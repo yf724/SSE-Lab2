@@ -6,8 +6,7 @@
 	<body>
 		<h1 style="font-size: large; text-align: center;">Hello {{ name }} <h1>
 		{%if repos%}
-			<p>Entered if statement</p>
-			<ul>
+			<ul style="font-size: small;">
 			{%for repo in repos %}
 				<li>
 				{{repo.full_name}} last updated at {{repo.updated_at}}
