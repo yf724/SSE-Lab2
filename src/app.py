@@ -28,7 +28,9 @@ def github():
 
 @app.route("/githubUsername", methods=["POST"])
 def githubUsername():
-    return "hello"
+    input_name = request.form.get("name")
+    return render_template("githubUsername.html", name=input_name)
+
 
 
 def process_query(query):
