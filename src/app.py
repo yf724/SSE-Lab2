@@ -31,9 +31,17 @@ def github():
 def githubUsername():
     input_name = request.form.get("name")
     response = requests.get(f"https://api.github.com/users/{input_name}/repos")
+    REPOS = []
     if response.status_code == 200:
         repos = response.json()
-    return render_template("githubUsername.html", name=input_name, repos=repos)
+    for repo in repos:
+        full_name = repo['full_name']
+        time = repo['updated_at']
+        response_commits = requests.get(f"https://api.github.com/repos/{input_name}/{repo}/commits")
+        commit = response_commits.json()
+        commits = commit[0]['sha']
+        REPOS.append({'repo': full_name, 'time': time, 'commits': commits})
+    return render_template("githubUsername.html", name=input_name, repos=REPOS)
 
 
 def process_query(query):

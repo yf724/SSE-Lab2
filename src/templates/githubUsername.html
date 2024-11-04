@@ -4,13 +4,13 @@
 		<title>hello</title>
 	</head>
 	<body>
-		<h1 style="font-size: 30px; text-align: center;">Hello {{ name }} <h1>
+		<h1 style="font-size: 30px; text-align: center;">Hello {{ name }} </h1>
 		{%if repos%}
 			<ul style="font-size: 15px;">
 			{%for repo in repos %}
 				<li>
-				{{repo.full_name}} last updated at {{repo.updated_at}}
-				Commit: {{repo.sha}}
+				{{repo.repo}} last updated at {{repo.time}}
+				Commit: {{repo.commits}}
 				</li>
 			{% endfor %}
 			</ul>
