@@ -10,6 +10,7 @@
 			{%for repo in repos %}
 				<li>
 				{{repo.full_name}} last updated at {{repo.updated_at}}
+				Commit: {{repo.sha}}
 				</li>
 			{% endfor %}
 			</ul>
