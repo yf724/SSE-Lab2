@@ -21,6 +21,11 @@ def process_queries():
     return process_query(query)
 
 
+@app.route("/github", methods=["POST"])
+def github():
+    return render_template("github.html")
+
+
 def process_query(query):
     if query == "dinosaurs":
         return "Dinosaurs ruled the Earth 200 million years ago"
