@@ -33,9 +33,7 @@ def githubUsername():
     response = requests.get(f"https://api.github.com/users/{input_name}/repos")
     if response.status_code == 200:
         repos = response.json()
-        for repo in repos:
-            print(repo["full_name"])
-    return render_template("githubUsername.html", name=input_name)
+    return render_template("githubUsername.html", name=input_name, repos=repos)
 
 
 def process_query(query):
