@@ -7,12 +7,12 @@
 	<body>
 		<h1 style="font-size: 35px; text-align: center;">Hello {{ name }} </h1>
 		{%if repos%}
-			<ul style="font-size: 20px; text-align: center;">
+			<ul style="font-size: 20px; ">
 			{%for repo in repos %}
-				<li style="list-style-type: circle; text-align: center;">
+				<li style="list-style-type: circle;">
 				<strong>{{repo.repo}}</strong> last updated at <strong>{{repo.time}}</strong>
 				<ul>
-					<li style="list-style-type: square; text-align: center;">
+					<li style="list-style-type: square;">
 						Latest Commit: {{repo.commits}}
 					</li>
 				</ul>
