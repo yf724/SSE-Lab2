@@ -9,10 +9,10 @@
 		{%if repos%}
 			<ul style="font-size: 20px; text-align: center;">
 			{%for repo in repos %}
-				<li style="list-style-type: circle;">
+				<li style="list-style-type: circle; text-align: center;">
 				<strong>{{repo.repo}}</strong> last updated at <strong>{{repo.time}}</strong>
 				<ul>
-					<li style="list-style-type: square;">
+					<li style="list-style-type: square; text-align: center;">
 						Latest Commit: {{repo.commits}}
 					</li>
 				</ul>
