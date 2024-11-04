@@ -4,9 +4,9 @@
 		<title>hello</title>
 	</head>
 	<body>
-		<h1 style="font-size: large; text-align: center;">Hello {{ name }} <h1>
+		<h1 style="font-size: 30px; text-align: center;">Hello {{ name }} <h1>
 		{%if repos%}
-			<ul style="font-size: small;">
+			<ul style="font-size: 15px;">
 			{%for repo in repos %}
 				<li>
 				{{repo.full_name}} last updated at {{repo.updated_at}}
