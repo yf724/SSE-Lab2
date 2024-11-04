@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta name="viewport" content="width=device-width"> 
 		<title>hello</title>
 	</head>
 	<body>
-		<h1 style="font-size: 30px; text-align: center;">Hello {{ name }} </h1>
+		<h1 style="font-size: 35px; text-align: center;">Hello {{ name }} </h1>
 		{%if repos%}
-			<ul style="font-size: 15px;">
+			<ul style="font-size: 20px;">
 			{%for repo in repos %}
-				<li>
-				{{repo.repo}} last updated at {{repo.time}}
-				Commit: {{repo.commits}}
+				<li style="list-style-type: circle;">
+				<strong>{{repo.repo}}</strong> last updated at <strong>{{repo.time}}</strong>
+				<ul>
+					<li style="list-style-type: square;">
+						Latest Commit: {{repo.commits}}
+					</li>
+				</ul>
 				</li>
 			{% endfor %}
 			</ul>
