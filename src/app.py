@@ -23,7 +23,6 @@ def process_queries():
 
 @app.route("/github", methods=["POST"])
 def github():
-    input_name = request.form.get("name")
     return "hello"
 
 
