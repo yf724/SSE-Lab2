@@ -37,7 +37,8 @@ def githubUsername():
     for repo in repos:
         full_name = repo['full_name']
         time = repo['updated_at']
-        response_commits = requests.get(f"https://api.github.com/repos/{input_name}/{repo}/commits")
+        response_commits = requests.get(
+            f"https://api.github.com/repos/{input_name}/{repo}/commits")
         commit = response_commits.json()
         commits = commit[0]['sha']
         REPOS.append({'repo': full_name, 'time': time, 'commits': commits})
