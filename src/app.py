@@ -35,7 +35,7 @@ def githubUsername():
         repos = response.json()
         for repo in repos:
             print(repo["full_name"])
-    return render_template("githubUsername.html", name=input_name)
+    #return render_template("githubUsername.html", name=input_name)
 
 
 def process_query(query):
