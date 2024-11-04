@@ -23,7 +23,7 @@ def process_queries():
 
 @app.route("/github", methods=["POST"])
 def github():
-    return "hello"
+    return render_template("github.html")
 
 
 def process_query(query):
