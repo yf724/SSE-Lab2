@@ -63,7 +63,7 @@ def githubUsername():
             facts = response_fact.json()
         else:
             print(f"Error: {response_fact.status_code}")
-        fact = facts['data']['0']
+        fact = facts['.'][0]
     return render_template(
         "githubUsername.html", name=input_name, repos=REPOS, fact=fact)
 
