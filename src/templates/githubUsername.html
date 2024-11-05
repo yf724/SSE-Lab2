@@ -4,17 +4,17 @@
 		<meta name="viewport" content="width=device-width"> 
 		<title>hello</title>
 	</head>
-	<body>
-		<h1 style="font-size: 35px; text-align: center;">Hello {{ name }} </h1>
+	<body style="font-family: Arial, sans-serif;">
+		<h1 style="font-size: 35px; text-align: center;">Hello {{ name }} ! </h1>
 		{%if repos%}
 			
 			{%for repo in repos %}
 				<ul>
-				<li style="list-style-type: circle;">
+				<li style="list-style-type: circle; font-size: 25px;">
 				<strong>{{repo.repo}}</strong> last updated at <strong>{{repo.time}}</strong>
 				</li>
 				
-				<table class="table", style="width: 80%; border-spacing: 10px; text-align: center;">
+				<table class="table", style="width: 80%; border-spacing: 10px; text-align: center; border: 1px solid black; border-collapse: collapse">
 					<thead>
 					  <tr>
 						<th scope="col">Commit hash</th>
