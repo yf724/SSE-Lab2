@@ -7,16 +7,30 @@
 	<body>
 		<h1 style="font-size: 35px; text-align: center;">Hello {{ name }} </h1>
 		{%if repos%}
-			<ul style="font-size: 20px; ">
+			
 			{%for repo in repos %}
+				<ul>
 				<li style="list-style-type: circle;">
 				<strong>{{repo.repo}}</strong> last updated at <strong>{{repo.time}}</strong>
-				<ul>
-					<li style="list-style-type: square;">
-						Latest Commit: {{repo.commits}}
-					</li>
-				</ul>
 				</li>
+				</ul>
+				<table style="font-size: 20px; ">
+					<thead>
+					<tr>
+						<th>commit hash</th>
+						<th>author</th>
+						<th>date</th>
+						<th>commit messag</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{repo.commits}}</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
 				<br>
 			{% endfor %}
 			</ul>
