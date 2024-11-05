@@ -46,7 +46,7 @@ def githubUsername():
         message = commit[0]['commit']['message']
         REPOS.append(
             {'repo': full_name,
-             'time': time, 
+             'time': time,
              'commits': commits,
              'author': author,
              'date': date,
