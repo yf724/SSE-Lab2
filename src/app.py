@@ -34,6 +34,8 @@ def githubUsername():
     REPOS = []
     if response.status_code == 200:
         repos = response.json()
+    else:
+        print(f"Error: {response.status_code}")
     for repo in repos:
         full_name = repo['full_name']
         time = repo['updated_at']
@@ -56,8 +58,14 @@ def githubUsername():
              'date': date,
              'message': message,
              'languages': languages})
+        response_fact = requests.get("https://meowfacts.herokuapp.com/")
+        if response_fact.status_code == 200:
+            facts = response_fact.json()
+        else:
+            print(f"Error: {response_fact.status_code}")
+        fact = facts['data']['0']
     return render_template(
-        "githubUsername.html", name=input_name, repos=REPOS)
+        "githubUsername.html", name=input_name, repos=REPOS, fact=fact)
 
 
 def process_query(query):
