@@ -44,13 +44,18 @@ def githubUsername():
         author = commit[0]['commit']['author']['name']
         date = commit[0]['commit']['author']['date']
         message = commit[0]['commit']['message']
+        response_language = requests.get(
+            f"https://api.github.com/repos/{full_name}")
+        language = response_language.json()
+        languages = language['language']
         REPOS.append(
             {'repo': full_name,
              'time': time,
              'commits': commits,
              'author': author,
              'date': date,
-             'message': message})
+             'message': message,
+             'languages': languages})
     return render_template(
         "githubUsername.html", name=input_name, repos=REPOS)
 

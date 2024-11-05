@@ -21,6 +21,7 @@
 						<th scope="col" style="border: 1px solid black; padding: 10px;">Author</th>
 						<th scope="col" style="border: 1px solid black; padding: 10px;">Date</th>
 						<th scope="col" style="border: 1px solid black; padding: 10px;">Commit message</th>
+						<th scope="col" style="border: 1px solid black; padding: 10px;">Main language</th>
 					  </tr>
 					</thead>
 					<tbody>
@@ -29,9 +30,11 @@
 						<td style="border: 1px solid black; padding: 10px;">{{ repo.author }}</td>
 						<td style="border: 1px solid black; padding: 10px;">{{ repo.date }}</td>
 						<td style="border: 1px solid black; padding: 10px;">{{ repo.message }}</td>
+						<td style="border: 1px solid black; padding: 10px;">{{ repo.languages }}</td>
 					  </tr> 
 					</tbody>
 				</table>
+
 				</ul>
 				<br>
 			{% endfor %}
