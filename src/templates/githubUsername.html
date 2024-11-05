@@ -14,22 +14,22 @@
 				<strong>{{repo.repo}}</strong> last updated at <strong>{{repo.time}}</strong>
 				</li>
 				
-				<table style="font-size: 20px; ">
+				<table class="table">
 					<thead>
-					<tr>
-						<th>commit hash</th>
-						<th>author</th>
-						<th>date</th>
-						<th>commit messag</th>
-					</tr>
+					  <tr>
+						<th scope="col">Commit hash</th>
+						<th scope="col">Author</th>
+						<th scope="col">Date</th>
+						<th scope="col">Commit message</th>
+					  </tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>{{repo.commits}}</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
+					  <tr>
+						<td>{{repo.commits}}</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+						<td>Otto</td>
+					  </tr> 
 					</tbody>
 				</table>
 				</ul>
