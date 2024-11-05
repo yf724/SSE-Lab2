@@ -31,9 +31,6 @@ def github():
 def githubUsername():
     input_name = request.form.get("name")
     response = requests.get(f"https://api.github.com/users/{input_name}/repos")
-    emoji = response.get(
-        "https://github.githubassets.com/images/"
-        "icons/emoji/unicode/1f947.png?v8")
     REPOS = []
     if response.status_code == 200:
         repos = response.json()
@@ -47,7 +44,7 @@ def githubUsername():
         REPOS.append(
             {'repo': full_name, 'time': time, 'commits': commits})
     return render_template(
-        "githubUsername.html", name=input_name, repos=REPOS, emoji=emoji)
+        "githubUsername.html", name=input_name, repos=REPOS)
 
 
 def process_query(query):
