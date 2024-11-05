@@ -45,8 +45,12 @@ def githubUsername():
         date = commit[0]['commit']['author']['date']
         message = commit[0]['commit']['message']
         REPOS.append(
-            {'repo': full_name, 'time': time, 
-             'commits': commits, 'author': author, 'date': date, 'message': message})
+            {'repo': full_name,
+             'time': time, 
+             'commits': commits,
+             'author': author,
+             'date': date,
+             'message': message})
     return render_template(
         "githubUsername.html", name=input_name, repos=REPOS)
 
