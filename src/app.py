@@ -41,8 +41,12 @@ def githubUsername():
             f"https://api.github.com/repos/{full_name}/commits")
         commit = response_commits.json()
         commits = commit[0]['sha']
+        author = commit[0]['commit']['author']['name']
+        date = commit[0]['commit']['author']['date']
+        message = commit[0]['commit']['message']
         REPOS.append(
-            {'repo': full_name, 'time': time, 'commits': commits})
+            {'repo': full_name, 'time': time, 
+             'commits': commits, 'author': author, 'date': date, 'message': message})
     return render_template(
         "githubUsername.html", name=input_name, repos=REPOS)
 
