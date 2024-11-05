@@ -10,17 +10,17 @@
 			
 			{%for repo in repos %}
 				<ul>
-				<li style="list-style-type: circle; font-size: 25px;">
+				<li style="list-style-type: circle; font-size: 20px;">
 				<strong>{{repo.repo}}</strong> last updated at <strong>{{repo.time}}</strong>
 				</li>
 				
-				<table class="table", style="width: 80%; border-spacing: 10px; text-align: center; border: 1px solid black; border-collapse: collapse">
+				<table class="table", style="width: 80%; border-spacing: 10px; text-align: center; border: 1px solid black; border-collapse: collapse; margin-top: 20px;">
 					<thead>
 					  <tr>
-						<th scope="col">Commit hash</th>
-						<th scope="col">Author</th>
-						<th scope="col">Date</th>
-						<th scope="col">Commit message</th>
+						<th scope="col" style="border: 1px solid black; padding: 10px;">Commit hash</th>
+						<th scope="col" style="border: 1px solid black; padding: 10px;">Author</th>
+						<th scope="col" style="border: 1px solid black; padding: 10px;">Date</th>
+						<th scope="col" style="border: 1px solid black; padding: 10px;">Commit message</th>
 					  </tr>
 					</thead>
 					<tbody>
