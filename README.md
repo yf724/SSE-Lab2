@@ -1,1 +1,8 @@
 This is the second repository.
+Event Fetcher is a Python application that retrieves event data from the Imperial College London South Kensington campus via an Atom feed. The program processes and filters events based on category and outputs details about workshops, seminars, training courses, and practice sessions. The data is parsed from an XML response using Python's xml.etree.ElementTree module and formatted for easy readability.
+
+This project was built to help students, faculty, and staff easily keep track of events relevant to their interests.Event Fetcher is a Python application that retrieves event data from the Imperial College London South Kensington campus via an Atom feed. The program processes and filters events based on category and outputs details about workshops, seminars, training courses, and practice sessions. The data is parsed from an XML response using Python's xml.etree.ElementTree module and formatted for easy readability.
+
+This project was built to help students, faculty, and staff easily keep track of events relevant to their interests.Event Fetcher is a Python application that retrieves event data from the Imperial College London South Kensington campus via an Atom feed. The program processes and filters events based on category and outputs details about workshops, seminars, training courses, and practice sessions. The data is parsed from an XML response using Python's xml.etree.ElementTree module and formatted for easy readability.
+
+This project was built to help students, faculty, and staff easily keep track of events relevant to their interests.
